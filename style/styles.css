@@ -1,0 +1,38 @@
+body {
+	background: #f3f5fc;
+	width: 100%;
+}
+
+header img{
+	width: 120px;
+	height: 48px;
+	margin-top: 40px;
+	margin-left: 40px;
+}
+
+#principal {
+	margin: 40px;
+	width: 60%;
+
+}
+
+#principal textarea {
+	border: none;
+	background-color: transparent;
+	width: 100%;
+	height: 300px;
+	resize: none;
+}
+
+
+.container {
+	width: 500px;
+
+}
+.container button {
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #666666;
+}
+
+
