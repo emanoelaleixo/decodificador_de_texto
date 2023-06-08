@@ -1,91 +1,174 @@
-body {
-	background: #f3f5fc;
-	font-weight: 400;
-  font-size: 32px;
-  line-height: 150%;
-}
-
-header img{
-	width: 120px;
-	height: 48px;
-	margin-top: 40px;
-	margin-left: 40px;
-}
-
-#container {
-	display: flex;
-	margin-bottom: 50px;
-  margin-left: 80px;
+* {
+    background: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
 }
 
 
-#principal textarea {
-	border: none;
-	background-color: transparent;
-	resize: none;
-  color: #0A3871;
-  margin-top: 90px;
-  text-transform: lowercase;
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px;
+}
+
+.areaPrincipal {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
 }
 
 
-.containerButton {
-	display: flex;
-	margin-top: 20px;
+.text-area {
+    border: none;
+    color: #0A3871;
+    font-size: 20px;
+    text-transform: lowercase;
+    flex-grow: 1;
+    resize: none;
 }
+::placeholder { color: #0A3871; }
 
-#buttonCriptografar {
-	background-color: #0A3871;
-  border: 1px solid #0A3871;
-  border-radius: 24px;
-  color: white;
-  cursor: pointer;
-  height: 67px;
-  width: 328px;
-}
-
-#buttonDescriptografar{
-	background: #D8DFE8;
-  border: 1px solid #0A3871;
-  border-radius: 24px;
-  color: #0A3871;
-  cursor: pointer;
-  height: 67px;
-  margin-left: 30px;
-  width: 328px;
-}
-
-#semResultado {
-	width: 30%;
-	margin: 20px 20px 20px 0;
-	padding: 100px 10px;
-	background-color: white;
-	border-radius: 14px;
-	align-items: center;
-	display: none;
-}
-
-#msgNaoEncontrada {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.comResultado {
-	width: 30%;
-	margin: 20px 20px 20px 0;
-	padding: 100px 10px;
-	background-color: white;
-	border-radius: 14px;
-	align-items: center;
+.box-info {
+    display: flex;
+    align-items: center;
 
 }
 
-#principal h6{
-	color: #495057;
-  font-size:10px;
+.icon {
+    width: 21px;
 }
-footer {
-	text-align: center;
-	padding: 20px 0;
+
+.informacao {
+    color: #495057;
+    font-size:15px;
+    margin: 14px 3px;
+}
+
+
+
+.botoes {
+    display: flex;
+}
+
+
+
+.btn-encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+.btn-encriptar:hover {
+    background: #D8DFE8;
+    color: #0A3871;
+}
+
+.btn-desencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+.btn-desencriptar:hover {
+    background-color: #0A3871;
+    color: white;
+}
+
+.resposta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+}
+
+.mensagem {
+    background: white;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin: 0px 5px 10px 5px;
+    padding: 5px;
+    flex-grow: 1;
+    resize: none;
+}
+
+.btn-copiar {
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    width: 100%;
+}
+
+.btn-copiar:hover {
+    background-color: #0A3871;
+    color: white;
+}
+
+footer p {
+    color: #0A3871;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.link {
+    font-size: 15px;
+    color: #0A3871;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #495057;
+}
+
+
+/* CSS Mobile */
+
+@media(max-width: 768px) {
+    main{
+        flex-direction: column;
+        margin: 30px 5px;
+    }
+
+    .text-area {
+        flex-grow: 2;
+    }
+
+    .box-info, .botoes {
+        flex-grow: 1;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        height: 40px;
+        font-size: 20px;
+        
+    }
+
+    .resposta {
+        align-items: center;
+        margin: 10px 5px;
+
+    }
+
+    .mensagem {
+        margin: 10px 0px 10px 0px;
+        padding: 0px;
+        font-size: 24px;
+    }
+
+    .btn-copiar {
+        height: 40px;
+        font-size: 20px;
+    }
 }

@@ -6,56 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
 </head>
 <body>
 
-    <header> 
-        <img src="img/logo.png">
+    <header>
+        <img src="img/logo.png" alt="Logo da Alura">
     </header>
-        <main id="container">
-
-            <section id="principal">
-
-                <textarea cols="40" rows="4" placeholder="Digite seu Texto" id="texto" ></textarea>
-
-                <div>
-                    <h6>&excl - Apenas letras minúsculas e sem acento.</h6>
-
-                </div>
     
-                <div class="containerButton">
-                    <button id="buttonCriptografar">Criptografar</button>
-                    <button id="buttonDescriptografar">Descriptografar</button>    
-                </div>
+    <main>
+        <section class="areaPrincipal">
+            <textarea class="text-area" placeholder="Digite seu texto"></textarea>
     
-            </section>
-            
-    
-            <section id="semResultado">
-    
-                
-                <div id="msgNaoEncontrada">
-                    <img src="img/imagem.png" alt="">
-    
-                    <h2>Nenhuma mensagem encontrada</h2>
-    
-                    <p>Digite um texto que você deseja criptografar ou descriptografar</p>
-                </div>
-                
-                
-            </section>
-
-           
-            <section id="resultado" class="comResultado">
-                
-            </section>
-
-        </main>
+            <div class="box-info">
+                <img class="icon" src="img/icon.png">
+                <h6 class="informacao">Apenas letras minúsculas e sem acento.</h6>
+            </div>
+            <div class="botoes">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
+            </div>
+        </section>
+        
+        <section class="resposta">
+            <textarea class="mensagem" ></textarea>
+            <button class="btn-copiar">Copiar</button>
+        </section>
+    </main>
         
 
     <footer>
 
-        <p>&copy-feito por Emanoel Aleixo</p>
+        <p>&copy-Feito por <a class="link" href="https://github.com/emanoelaleixo">Emanoel Aleixo</a></p>
+
         
     </footer>
 

@@ -1,10 +1,12 @@
-const textoDigitado = document.getElementById('texto')
 
-const botaoCriptografar = document.getElementById('buttonCriptografar')
-const botaoDescriptografar = document.getElementById('buttonDescriptografar')
+const textoDigitado = document.querySelector('.text-area')
 
-const telaResultado = document.getElementById('resultado')
-const telaSemResultado = document.getElementById('semResultado')
+const botaoCriptografar = document.querySelector('.btn-encriptar')
+const botaoDescriptografar = document.querySelector('.btn-desencriptar')
+
+const telaResultado = document.querySelector('.mensagem')
+
+const botaoCopiar = document.querySelector('.btn-copiar')
 
 const letras = ['a', 'e', 'i', 'o', 'u']
 const codigos = ['ai', 'enter', 'imes', 'ober', 'ufat']
@@ -14,6 +16,8 @@ function textoInformado() {
     let texto = textoDigitado.value
     return texto 
 }
+
+
 
 function criptografar () {
     frase = textoInformado()
@@ -44,10 +48,21 @@ function descriptografar () {
     mostrarResultado(frase)
 }
 
+function copiar() {
+    let textoCopiado = document.querySelector(".mensagem");
+    textoCopiado.select();
+    textoCopiado.setSelectionRange(0, 99999);
+  
+    document.execCommand("copy");
+
+}
+
 botaoCriptografar.addEventListener('click', criptografar)
 botaoDescriptografar.addEventListener('click', descriptografar)
-
+botaoCopiar.addEventListener('click', copiar);
 
 function mostrarResultado(texto) {
-    telaResultado.innerHTML = "<textarea>" + texto + "</textarea>"
+    telaResultado.innerHTML = texto
+    textoDigitado.value = ""
 }
+
